@@ -2,7 +2,7 @@
 
 [ext_resource path="res://tileset/outdoor.png" type="Texture" id=1]
 
-[node name="Outdoor" type="Node"]
+[node name="Outdoor" type="Node" index="0"]
 
 [node name="outdoor" type="Sprite" parent="." index="0"]
 
@@ -20,7 +20,15 @@ region_enabled = true
 region_rect = Rect2( 384, 0, 640, 512 )
 _sections_unfolded = [ "Region" ]
 
-[node name="rock" type="Sprite" parent="." index="2"]
+[node name="bush" type="Sprite" parent="." index="2"]
+
+position = Vector2( 1194.68, 451.516 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 512, 1024, 384 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock" type="Sprite" parent="." index="3"]
 
 position = Vector2( 832, 64 )
 texture = ExtResource( 1 )
