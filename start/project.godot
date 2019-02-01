@@ -10,8 +10,23 @@ config_version=3
 
 [application]
 
-config/name="Create a tileset (start)"
+config/name="02.Inventory UI design and code (start)"
+run/main_scene="res://demos/InventoryMenuDemo.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+ItemDatabase="*res://inventory/ItemDatabase.tscn"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+
+[input]
+
+b=[ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
+ ]
 
 [rendering]
 
