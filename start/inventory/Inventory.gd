@@ -1,8 +1,8 @@
 extends Node
 
 signal content_changed(items_as_string)
-signal item_added(inventory, item)
-signal item_removed(inventory, item)
+signal item_added(item)
+signal item_removed(item)
 
 func get_items():
 	return get_children()
@@ -51,8 +51,8 @@ func _instance_item_from_db(reference):
 	var item = ItemDatabase.get_item(reference)
 	add_child(item)
 	item.connect("depleted", self, "_on_Item_depleted", [item])
-	emit_signal("item_added", self, item)
+	emit_signal("item_added", item)
 	return item
 
 func _on_Item_depleted(item):
-	emit_signal("item_removed", self, item)
+	emit_signal("item_removed", item)

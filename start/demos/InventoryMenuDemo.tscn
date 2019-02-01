@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://demos/InventoryMenuDemo.gd" type="Script" id=1]
 [ext_resource path="res://inventory/Inventory.tscn" type="PackedScene" id=2]
@@ -8,8 +8,9 @@
 [ext_resource path="res://inventory/items/equipment/sword/Sword.tscn" type="PackedScene" id=6]
 [ext_resource path="res://actors/Actor.tscn" type="PackedScene" id=7]
 [ext_resource path="res://interface/add_items_menu/AddItemsMenu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://interface/inventory/ItemsMenu.tscn" type="PackedScene" id=9]
 
-[node name="InventoryDemo" type="Node"]
+[node name="InventoryDemo" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -57,5 +58,9 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 
 [node name="AddItemsMenu" parent="Interface" index="0" instance=ExtResource( 8 )]
+
+[node name="ItemsMenu" parent="Interface" index="1" instance=ExtResource( 9 )]
+
+margin_right = -310.0
 
 
