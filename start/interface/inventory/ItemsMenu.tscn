@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://interface/theme/default.theme" type="Theme" id=1]
 [ext_resource path="res://interface/inventory/items-menu.gd" type="Script" id=2]
 [ext_resource path="res://interface/inventory/ItemButton.tscn" type="PackedScene" id=3]
-[ext_resource path="res://interface/inventory/user_select/UserSelectMenu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://interface/inventory/item-grid.gd" type="Script" id=4]
+[ext_resource path="res://interface/inventory/user_select/UserSelectMenu.tscn" type="PackedScene" id=5]
 
-[node name="ItemsMenu" type="Control"]
+[node name="ItemsMenu" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -86,7 +87,56 @@ size_flags_vertical = 1
 custom_constants/vseparation = 16
 custom_constants/hseparation = 16
 columns = 2
+script = ExtResource( 4 )
 _sections_unfolded = [ "custom_constants" ]
+
+[node name="ItemButton" parent="Column/ItemsList/Margin/Grid" index="0" instance=ExtResource( 3 )]
+
+margin_right = 616.0
+
+[node name="ItemButton2" parent="Column/ItemsList/Margin/Grid" index="1" instance=ExtResource( 3 )]
+
+margin_left = 632.0
+margin_right = 1248.0
+
+[node name="ItemButton3" parent="Column/ItemsList/Margin/Grid" index="2" instance=ExtResource( 3 )]
+
+margin_top = 76.0
+margin_right = 616.0
+margin_bottom = 136.0
+
+[node name="ItemButton4" parent="Column/ItemsList/Margin/Grid" index="3" instance=ExtResource( 3 )]
+
+margin_left = 632.0
+margin_top = 76.0
+margin_right = 1248.0
+margin_bottom = 136.0
+
+[node name="ItemButton5" parent="Column/ItemsList/Margin/Grid" index="4" instance=ExtResource( 3 )]
+
+margin_top = 152.0
+margin_right = 616.0
+margin_bottom = 212.0
+
+[node name="ItemButton6" parent="Column/ItemsList/Margin/Grid" index="5" instance=ExtResource( 3 )]
+
+margin_left = 632.0
+margin_top = 152.0
+margin_right = 1248.0
+margin_bottom = 212.0
+
+[node name="ItemButton7" parent="Column/ItemsList/Margin/Grid" index="6" instance=ExtResource( 3 )]
+
+margin_top = 228.0
+margin_right = 616.0
+margin_bottom = 288.0
+
+[node name="ItemButton8" parent="Column/ItemsList/Margin/Grid" index="7" instance=ExtResource( 3 )]
+
+margin_left = 632.0
+margin_top = 228.0
+margin_right = 1248.0
+margin_bottom = 288.0
 
 [node name="DescriptionPanel" type="Panel" parent="Column" index="1"]
 
@@ -142,7 +192,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="UserSelectMenu" parent="." index="1" instance=ExtResource( 4 )]
+[node name="UserSelectMenu" parent="." index="1" instance=ExtResource( 5 )]
 
 visible = false
 

@@ -13,7 +13,7 @@ func initialize(inventory):
 		item_button.connect("focus_entered", self, "_on_ItemButton_focus_entered")
 		item_button.connect("pressed", self, "_on_ItemButton_pressed", [item])
 		
-	_item_grid.get_child(0).grab_focus()
+	_item_grid.initialize()
 	inventory.connect("item_added", self, "create_item_button")
 	connect("item_use_requested", inventory, "use")
 
